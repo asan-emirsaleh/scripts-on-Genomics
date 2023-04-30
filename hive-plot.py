@@ -72,7 +72,7 @@ for variant in variants:
                               "-p0.0001",
                               "-o", target + "_2_" + query + ".paf"],
                         stdout=subprocess.PIPE, stderr = subprocess.PIPE)
-        # check the output of the PGA script
+        # check the output of the shell command
         if aln.returncode != 0:
             if aln.stdout:
                 standard_output = aln.stdout.decode('utf-8')
